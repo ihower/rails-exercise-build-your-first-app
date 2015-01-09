@@ -24,6 +24,11 @@ class EventsController < ApplicationController
 
   def show
     @page_title = @event.name
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def dashboard

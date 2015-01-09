@@ -1,0 +1,11 @@
+<%= @event.name %>
+
+<p>Category: <%= @event.category.try(:name) %><p>
+
+<p>Group:
+  <% @event.groups.each do |g| %>
+    <%= g.name %>
+  <% end %>
+</p>
+
+<%= simple_format(@event.description) %>
