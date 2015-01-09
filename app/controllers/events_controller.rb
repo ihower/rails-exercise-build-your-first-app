@@ -3,7 +3,11 @@ class EventsController < ApplicationController
   before_action :set_event, :only => [ :show, :edit, :update, :destroy]
 
   def index
-    @events = Event.page(params[:page]).per(5)
+    if params[:keyword]
+      @events = Event.where( [ "name like ?", "%#{params[:keyword]}%" ]).page(params[:page]).per(5)
+    else
+      @events = Event.page(params[:page]).per(5)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
