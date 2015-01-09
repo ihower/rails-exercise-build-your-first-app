@@ -16,6 +16,9 @@
     <td><%= event.name %></td>
     <td>
       <%= link_to "顯示", event_path(event), :class => 'btn btn-default' %>
+
+      <%= link_to '留言', event_comments_path(event), :class => 'btn btn-default' %>
+
       <%= link_to "編輯", edit_event_path(event), :class => 'btn btn-default' %>
       <%= link_to "刪除", event_path(event), :method => :delete, :data => { :confirm => "Are you sure?"}, :class => 'btn btn-danger' %>
     </td>

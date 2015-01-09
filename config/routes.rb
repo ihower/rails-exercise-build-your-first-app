@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :events
+  resources :events do
+    resources :comments, :controller => 'event_comments'
+  end
+
   resources :people
 
   get "welcome/say_hello" => "welcome#say"

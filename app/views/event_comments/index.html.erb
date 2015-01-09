@@ -1,0 +1,14 @@
+<ul>
+<% @comments.each do |comment| %>
+  <li>
+    <%= comment.content %>
+    <%= link_to 'show', event_comment_path(@event, comment) %>
+    <%= link_to 'edit', edit_event_comment_path(@event, comment) %>
+    <%= link_to 'destroy', event_comment_path(@event, comment),
+                              :method => :delete %>
+  </li>
+<% end %>
+
+</ul>
+
+<%= link_to 'new comment', new_event_comment_path(@event) %>
