@@ -19,6 +19,8 @@
     <td>
       <%= link_to "顯示", event_path(event), :class => 'btn btn-default' %>
 
+      <%= link_to "Dashboard", dashboard_event_path(event), :class => 'btn btn-default' %>
+
       <%= link_to '留言', event_comments_path(event), :class => 'btn btn-default' %>
 
       <%= link_to "編輯", edit_event_path(event), :class => 'btn btn-default' %>

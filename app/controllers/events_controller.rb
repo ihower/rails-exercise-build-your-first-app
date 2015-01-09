@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  before_action :set_event, :only => [ :show, :edit, :update, :destroy]
+  before_action :set_event, :only => [ :show, :dashboard, :edit, :update, :destroy]
 
   def index
     if params[:keyword]
@@ -24,6 +24,9 @@ class EventsController < ApplicationController
 
   def show
     @page_title = @event.name
+  end
+
+  def dashboard
   end
 
   def new

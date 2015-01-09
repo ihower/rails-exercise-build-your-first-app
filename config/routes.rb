@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       get :report
     end
 
+    member do
+      get :dashboard
+    end
   end
 
   resources :people
