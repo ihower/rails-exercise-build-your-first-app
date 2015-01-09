@@ -19,6 +19,9 @@ class EventsController < ApplicationController
     end
   end
 
+  def report
+  end
+
   def show
     @page_title = @event.name
   end

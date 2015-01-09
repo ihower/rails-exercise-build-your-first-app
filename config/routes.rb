@@ -2,6 +2,11 @@ Rails.application.routes.draw do
 
   resources :events do
     resources :comments, :controller => 'event_comments'
+
+    collection do
+      get :report
+    end
+
   end
 
   resources :people
