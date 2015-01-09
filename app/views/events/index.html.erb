@@ -5,6 +5,11 @@
   <%= submit_tag "Search" %>
 <% end %>
 
+<p>
+<%= link_to 'Sort by Name', events_path( :order => "name") %> |
+<%= link_to 'Sort by Default', events_path %>
+</p>
+
 <table class="table table-hover">
 <% @events.each do |event| %>
   <tr>

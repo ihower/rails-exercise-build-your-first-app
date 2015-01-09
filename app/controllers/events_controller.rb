@@ -9,6 +9,9 @@ class EventsController < ApplicationController
       @events = Event.page(params[:page]).per(5)
     end
 
+    sort_by = (params[:order] == 'name') ? 'name' : 'id DESC'
+    @events = @events.order(sort_by)
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml { render :xml => @events.to_xml }
