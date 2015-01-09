@@ -1,4 +1,7 @@
 <%= @event.name %>
+
+<p>Category: <%= @event.category.try(:name) %><p>
+
 <%= simple_format(@event.description) %>
 
 <p><%= link_to 'Back to index', :controller => 'events', :action => 'index' %></p>
