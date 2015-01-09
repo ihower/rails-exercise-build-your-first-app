@@ -4,6 +4,9 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
+    <td>
+      <%= link_to "顯示", event_path(event) %>
+    </td>
   </tr>
 <% end %>
 </table>
