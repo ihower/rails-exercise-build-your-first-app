@@ -18,6 +18,8 @@ gem 'devise'
 
 gem "kaminari"
 
+gem "paperclip"
+
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
